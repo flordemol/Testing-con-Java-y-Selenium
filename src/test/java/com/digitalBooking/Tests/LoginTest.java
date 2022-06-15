@@ -8,8 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
-import static org.junit.Assert.assertTrue;
-
 public class LoginTest {
 
     private WebDriver driver;
@@ -28,6 +26,7 @@ public class LoginTest {
         searchPage.irALogin();
         loginPage.completarInputs("florenciademollein@gmail.com", "cuentadb");
         loginPage.enviarLogin();
+        loginPage.obtenerResultado();
     }
 
     @After

@@ -16,7 +16,7 @@ public class SearchPage extends BasePage {
     protected static final String ciudadID = "ciudad";
     protected static final String botonBuscar = "btn-buscador";
     protected static final String resultadoID = "card-list";
-    protected static final String botonLogin = "login";
+    protected static final String botonLogin = "//a[@href='/login']";
 
     public void buscarCiudad(String ciudad) throws InterruptedException {
         WebElement searchBox = getWebElement(By.id(ciudadID));
@@ -38,7 +38,7 @@ public class SearchPage extends BasePage {
     }
 
     public void irALogin() throws InterruptedException{
-        WebElement login = getWebElement(By.xpath("//a[@href='/login']"));
+        WebElement login = getWebElement(By.xpath(botonLogin));
         Thread.sleep(1000);
         login.click();
     }
